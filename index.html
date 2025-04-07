@@ -96,7 +96,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/800');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/Firewatch.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -290,6 +290,8 @@
             overflow: hidden;
             transition: transform 0.3s;
             border: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
         }
         
         .project-card:hover {
@@ -300,10 +302,21 @@
         .project-img {
             height: 200px;
             background-color: #222;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         
         .project-info {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .project-title {
@@ -325,6 +338,10 @@
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
+        }
+        
+        .project-description {
+            flex-grow: 1;
         }
         
         /* Skills Section */
@@ -525,23 +542,24 @@
     <section id="experience">
         <div class="container">
             <h2 class="section-title">Experience</h2>
-            
+            <!-- Experience 01 -->
+             <!--
             <div class="experience-container">
                 <div class="experience-header">
-                    <h3 class="experience-title">Venetia</h3>
+                    <h3 class="experience-title">Murders in Venetia</h3>
                     <div class="experience-company">Funny Tales</div>
                     <div class="experience-description">
-                        "Project description quote goes here. This is a brief overview of what the project is about and what makes it unique or interesting."
+                        "Murders in Venetia is a narrative-driven, investigative VR game that blends immersive storytelling with engaging puzzle-solving. Set in 12th-century Venice, the game transports players into a richly detailed historical world populated by fictional characters and real-world references. As the first interactive film designed for VR devices, it offers a unique experience where players become active participants in the unfolding mystery."
                     </div>
                 </div>
                 
                 <div class="experience-content">
-                    <p>Working on this project has allowed me to develop specific skills and overcome various challenges, such as implementing complex systems and creating engaging content.</p>
+                    <p>Working on this project from the ground up as a Narrative Designer gave me the opportunity to explore the full depth of interactive storytelling in a VR context. Adapting the narrative from an existing novel challenged me to reconstruct and reinterpret key story elements to better fit the medium, while maintaining coherence and emotional impact. I developed strong skills in scriptwriting, narrative pacing, and historical worldbuilding, and I learned how to create content that remains compelling in an immersive format. Collaborating closely with developers and artists taught me how to align narrative vision with gameplay mechanics and visual style.</p>
                 </div>
                 
                 <div class="metadata">
                     <div class="metadata-item">
-                        <span class="metadata-label">Genre:</span> Narrative, 
+                        <span class="metadata-label">Genre:</span> Narrative, investigative, Puzzle
                     </div>
                     <div class="metadata-item">
                         <span class="metadata-label">Platform:</span> Meta Quest 
@@ -550,13 +568,13 @@
                         <span class="metadata-label">Engine:</span> Unity
                     </div>
                     <div class="metadata-item">
-                        <span class="metadata-label">Team size:</span> 15
+                        <span class="metadata-label">Team size:</span> ~10
                     </div>
                     <div class="metadata-item">
-                        <span class="metadata-label">Release date:</span> 2025
+                        <span class="metadata-label">Release date:</span> TBD
                     </div>
                     <div class="metadata-item">
-                        <span class="metadata-label">Currently working here since:</span> 2024
+                        <span class="metadata-label">Currently working since:</span> 04/2024
                     </div>
                 </div>
                 
@@ -566,19 +584,19 @@
                     </div>
                     <div class="role-subtitle">Narrative Designer</div>
                     <ul class="responsibilities">
-                        <li>Responsibility 1: Detailed description of what you did and how you did it.</li>
-                        <li>Responsibility 2: Another detailed description of your contributions.</li>
-                        <li>Responsibility 3: More details about your role and responsibilities.</li>
-                        <li>Responsibility 4: Further information about what you accomplished.</li>
+                        <li>Wrote the full narrative structure based on an existing novel</li>
+                        <li>Created character backstories, dialogues, and storylines</li>
+                        <li>Drafted narrative and design documentation, as well as scene scripts</li>
+                        <li>Tools used: Unity, Figma, Word, Excel</li>
                     </ul>
                 </div>
                 
                 <div class="project-images">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/200" alt="Project Image 1">
+                        <img src="Images/Venetia_01.png" alt="Project Image">
                     </div>
                     <div class="project-image">
-                        <img src="/api/placeholder/400/200" alt="Project Image 2">
+                        <img src="/api/placeholder/400/200" alt="NDA">
                     </div>
                 </div>
                 
@@ -586,18 +604,83 @@
                     <i>🔄</i> Development in progress
                 </div>
             </div>
-            
+            -->
+
+            <!-- Experience 02 -->
             <div class="experience-container">
                 <div class="experience-header">
-                    <h3 class="experience-title">VRider SBK</h3>
+                    <h3 class="experience-title">Zoppel: The Legend of Furiax</h3>
                     <div class="experience-company">Funny Tales</div>
                     <div class="experience-description">
-                        "Project description quote goes here. This is a brief overview of what the project is about and what makes it unique or interesting."
+                        "The Legend of Furiax is a 2D vertical shoot 'em up for mobile, inspired by the vibrant universe of Zoppel, a comic-style world filled with quirky characters and intense action. Designed with a young audience in mind, the game blends fast-paced gameplay with a gacha system and blockchain/NFT integration, creating a unique fusion of traditional arcade mechanics and emerging digital ownership models."
                     </div>
                 </div>
                 
                 <div class="experience-content">
-                    <p>Working on this project has allowed me to develop specific skills and overcome various challenges, such as implementing complex systems and creating engaging content.</p>
+                    <p>As both Game and Narrative Designer, I joined the project from day one, which gave me the opportunity to shape the vision of the game from scratch. One of the biggest challenges was aligning the gaming experience with blockchain features in a way that felt meaningful and fun, rather than intrusive. I strengthened my ability to design engaging game systems while also building a compelling narrative that expanded the Zoppel universe. This project helped me bridge gameplay mechanics with narrative coherence and user retention strategies.</p>
+                </div>
+                
+                <div class="metadata">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Genre:</span> Shoot Em' Up, Arcade 
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Platform:</span> Android, IoS
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Engine:</span> Unity
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Team size:</span> ~6
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Release date:</span> 01/2025
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Currently working since:</span> 03/2024
+                    </div>
+                </div>
+                
+                <div class="role-container">
+                    <div class="role-title">
+                        <i>👤</i> Role
+                    </div>
+                    <div class="role-subtitle">Game/Narrative Designer</div>
+                    <ul class="responsibilities">
+                        <li>Wrote and structured the full Game Design Document (GDD)</li>
+                        <li>Designed gameplay mechanics, gacha systems, and player economy</li>
+                        <li>Developed the narrative universe, including characters and dialogues</li>
+                        <li>Created supporting documentation for both design and storytelling</li>
+                        <li>Tools used: Unity, Figma, Excel, Word, Photoshop</li>
+                    </ul>
+                </div>
+                
+                <div class="project-images">
+                    <div class="project-image">
+                        <img src="Images/Zoppel_01.webp" alt="Project Image 1">
+                    </div>
+                    <div class="project-image">
+                        <img src="Images/Zoppel_02.jpg" alt="Project Image 2">
+                    </div>
+                </div>
+
+                <div class="development-status">
+                    <a href="https://play.google.com/store/apps/details?id=com.zoppel.thelegendoffuriax&hl=it">↗️ Link Google Play</a>
+                </div>
+            </div>
+
+            <!-- Experience 03 -->
+            <div class="experience-container">
+                <div class="experience-header">
+                    <h3 class="experience-title">VRider SBK DLC</h3>
+                    <div class="experience-company">Funny Tales</div>
+                    <div class="experience-description">
+                        "VRider SBK is a highly realistic and competitive VR motorcycle racing simulator, offering both singleplayer and multiplayer modes. As the first-ever VR game to simulate superbike racing with real tracks from the official SBK championship, it delivers an intense and immersive experience for fans of motorsports and virtual reality. Players can race on accurately recreated circuits, feel the thrill of high-speed competition, and challenge both AI and human opponents in a variety of racing modes."
+                    </div>
+                </div>
+                
+                <div class="experience-content">
+                    <p>Joining the project during its final development phase, I worked as a Game Designer focused on the downloadable content (DLC). This experience sharpened my ability to quickly understand an existing system and contribute meaningfully within a short timeframe. I gained hands-on experience in balancing and tuning AI behavior to enhance singleplayer challenge and realism, and I deepened my collaboration with developers to fine-tune systems for a polished player experience.</p>
                 </div>
                 
                 <div class="metadata">
@@ -611,13 +694,13 @@
                         <span class="metadata-label">Engine:</span> Unity
                     </div>
                     <div class="metadata-item">
-                        <span class="metadata-label">Team size:</span> 15
+                        <span class="metadata-label">Team size:</span> ~15
                     </div>
                     <div class="metadata-item">
-                        <span class="metadata-label">Release date:</span> 2025
+                        <span class="metadata-label">Release date:</span> 10/2024
                     </div>
                     <div class="metadata-item">
-                        <span class="metadata-label">Currently working here since:</span> 2024
+                        <span class="metadata-label">Currently working since:</span> 06/2024
                     </div>
                 </div>
                 
@@ -625,26 +708,26 @@
                     <div class="role-title">
                         <i>👤</i> Role
                     </div>
-                    <div class="role-subtitle">Narrative Designer</div>
+                    <div class="role-subtitle">Game Designer</div>
                     <ul class="responsibilities">
-                        <li>Responsibility 1: Detailed description of what you did and how you did it.</li>
-                        <li>Responsibility 2: Another detailed description of your contributions.</li>
-                        <li>Responsibility 3: More details about your role and responsibilities.</li>
-                        <li>Responsibility 4: Further information about what you accomplished.</li>
+                        <li>Tuned and balanced motorcycle AI for singleplayer modes</li>
+                        <li>Contributed to gameplay balancing for released DLCs</li>
+                        <li>Collaborated closely with the development team to refine AI systems</li>
+                        <li>Tools used: Unity, Excel</li>
                     </ul>
                 </div>
                 
                 <div class="project-images">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/200" alt="Project Image 1">
+                        <img src="Images/VRiderSBK_01.png" alt="Project Image 1">
                     </div>
                     <div class="project-image">
-                        <img src="/api/placeholder/400/200" alt="Project Image 2">
+                        <img src="Images/VRiderSBK_02.png" alt="Project Image 2">
                     </div>
                 </div>
-                
+
                 <div class="development-status">
-                    <i>🔄</i> Development in progress
+                    <a href="https://www.meta.com/it-it/experiences/vrider-sbk/7219828628138236/?srsltid=AfmBOorfoNXcgIM6b0cmppveq9cPVeo2KPR2GUy6QzUuCapihHTMcwt_" >↗️ Link Meta Store</a>
                 </div>
             </div>
             
@@ -661,45 +744,53 @@
                 <!-- Project Card 1 (placeholder) -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="/api/placeholder/400/200" alt="Project">
+                        <img src="Images/GlacialGlide.png" alt="Project">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Project Name</h3>
+                        <h3 class="project-title">Glacial Glide</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Game Design</span>
-                            <span class="project-tag">Narrative</span>
+                            <span class="project-tag">Endless Run</span>
+                            <span class="project-tag">2D</span>
+                            <span class="project-tag">Mobile</span>
+                            <span class="project-tag">Level & Mechanics Design</span>
                         </div>
-                        <p>Brief description of the project and your role in it.</p>
+                        <p>A 2D endless runner mobile game where players guide a skier downhill, dodging trees and obstacles. Developed during a university course, I contributed to gameplay design and coding.</p>
                     </div>
                 </div>
                 
                 <!-- Project Card 2 (placeholder) -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="/api/placeholder/400/200" alt="Project">
+                        <img src="Images/AztecDawn.png" alt="Project">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Project Name</h3>
+                        <h3 class="project-title">Aztec Dawn</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Level Design</span>
-                            <span class="project-tag">Prototyping</span>
+                            <span class="project-tag">Rogue Lite</span>
+                            <span class="project-tag">2.5D</span>
+                            <span class="project-tag">Desktop</span>
+                            <span class="project-tag">Level & Combat Design</span>
                         </div>
-                        <p>Brief description of the project and your role in it.</p>
+                        <p>A 2.5D rogue-lite PC game made for the 2025 Global Game Jam. Set in a mysterious temple, the player must fight strange creatures and protect a mystical bubble. I worked on gameplay design, narrative, and dialogues.</p>
+                        <a href="https://stan-gate.itch.io/aztec-dawn">↗️ Link Itch.io</a>
                     </div>
                 </div>
                 
                 <!-- Project Card 3 (placeholder) -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="/api/placeholder/400/200" alt="Project">
+                        <img src="Images/Beppys.png" alt="Project">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Project Name</h3>
+                        <h3 class="project-title">Beppy's Nitrous Oxide</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Quest Design</span>
-                            <span class="project-tag">Systems</span>
+                            <span class="project-tag">Platform</span>
+                            <span class="project-tag">2.5D</span>
+                            <span class="project-tag">Desktop</span>
+                            <span class="project-tag">Level & Mechanics Design</span>
                         </div>
-                        <p>Brief description of the project and your role in it.</p>
+                        <p>A 2.5D level-based platformer for PC, created during the 2024 Global Game Jam. Players control a quirky robot collecting nitrous oxide orbs to make people laugh. I contributed to both gameplay and narrative design, as well as development.</p>
+                        <a href="https://whatar.itch.io/beppys-nitrous-oxide">↗️ Link Itch.io</a>
                     </div>
                 </div>
                 
@@ -730,10 +821,9 @@
                 <div class="skill-category">
                     <h3 class="skill-category-title">Technical</h3>
                     <ul class="skills-list">
-                        <li>Unreal Engine</li>
-                        <li>Blueprint</li>
                         <li>Unity</li>
                         <li>C#</li>
+                        <li>Unreal Engine</li>
                         <li>Version Control</li>
                     </ul>
                 </div>
@@ -742,11 +832,10 @@
                 <div class="skill-category">
                     <h3 class="skill-category-title">Software</h3>
                     <ul class="skills-list">
-                        <li>Adobe Photoshop</li>
                         <li>Figma</li>
-                        <li>JIRA</li>
-                        <li>Confluence</li>
+                        <li>Notion</li>
                         <li>Microsoft Office</li>
+                        <li>Adobe Photoshop</li>
                     </ul>
                 </div>
                 
@@ -779,15 +868,23 @@
                     <h3 class="about-title">Hello, I'm Paolo</h3>
                     
                     <p class="about-text">
-                        Insert your bio here. Talk about your passion for game design, your journey, and what drives you. Mention your specialties and what kinds of projects excite you.
+                        My passion for game design was born while playing, driven by a deep curiosity to understand how games are made and a desire to recreate the same emotions I once felt as a player. I chose to pursue this path to combine one of my greatest passions with my need to create something meaningful for others.
                     </p>
                     
                     <p class="about-text">
-                        Discuss your approach to design, your philosophy, and what makes your work unique. You can also mention your education, key accomplishments, or other relevant personal details.
+                        For me, game design is all about conveying emotions. I strongly believe that a compelling story is at the heart of any great game, which is why I always put narrative first. My approach is centered on immersion and emotional engagement, crafting experiences that players can not only enjoy but also shape through their choices.
                     </p>
                     
                     <p class="about-text">
-                        End with a forward-looking statement about what you're interested in working on next or your career goals.
+                        I specialize in narrative design, with a particular interest in building rich worlds, memorable characters, and branching stories. I completed a one-year master's in game development followed by a specialization course in narrative design, which helped me grow both technically and creatively.
+                    </p>
+
+                    <p class="about-text">
+                        One of my proudest achievements so far has been writing the full narrative, characters, dialogues, and scripts, for a complete game project.
+                    </p>
+
+                    <p class="about-text">
+                        Looking ahead, I’m excited to contribute to story-driven projects where I can bring to life the kinds of narratives I’ve always dreamed of creating.
                     </p>
                 </div>
             </div>
@@ -813,7 +910,29 @@
                         <div class="contact-icon">💼</div>
                         <div class="contact-text">
                             <div class="contact-label">LinkedIn</div>
-                            <div class="contact-value">linkedin.com/in/yourname</div>
+                            <div class="contact-value">
+                                <a href="https://www.linkedin.com/in/paolocastagnetti/">linkedin.com/in/paolocastagnetti</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕹️</div>
+                        <div class="contact-text">
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">
+                                <a href="https://github.com/PaoloCastagnetti">github.com/PaoloCastagnetti</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🎮</div>
+                        <div class="contact-text">
+                            <div class="contact-label">Itch.io</div>
+                            <div class="contact-value">
+                                <a href="https://stan-gate.itch.io">stan-gate.itch.io</a>
+                            </div>
                         </div>
                     </div>
                     
