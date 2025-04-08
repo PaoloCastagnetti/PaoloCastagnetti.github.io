@@ -967,7 +967,7 @@
         // Fetch the count from GoatCounter
         window.addEventListener('load', function() {
             setTimeout(function() {
-                fetch('https://20001005.goatcounter.com/counter')
+                fetch('https://20001005.goatcounter.com/count')
                     .then(response => response.json())
                     .then(data => {
                         document.getElementById('visit-counter').textContent = data.count;
