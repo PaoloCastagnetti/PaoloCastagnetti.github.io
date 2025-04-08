@@ -511,10 +511,9 @@
             .project-images {
                 grid-template-columns: 1fr;
             }
-            .visit-counter {
-                margin-top: 10px;
+            .footer-text span#visitCount {
                 color: var(--gold);
-                font-size: 0.9rem;
+                font-weight: bold;
             }
         }
     </style>
@@ -960,9 +959,26 @@
     <footer>
         <div class="container">
             <p class="footer-text">© 2025 <span>Paolo Castagnetti</span> - All Rights Reserved</p>
-            <p class="footer-text">Visits: <span id="visitCount">0</span></p>
+            <p class="footer-text visits-count">Visits: <span id="visit-counter">...</span></p>
         </div>
     </footer>
+    
+    <script>
+        // Fetch the count from GoatCounter
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                fetch('https://20001005.goatcounter.com/counter')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('visit-counter').textContent = data.count;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching visitor count:', error);
+                        document.getElementById('visit-counter').textContent = 'Counter unavailable';
+                    });
+            }, 1000); // Wait a bit to ensure the view is counted
+        });
+    </script>
 
     <!-- Simple JS to highlight active nav links -->
     <script>
@@ -1001,36 +1017,9 @@
             });
         });
 
-        // Function to update the visit counter
-    function updateVisitCount() {
-        // Check if localStorage is supported
-        if (typeof(Storage) !== "undefined") {
-            // Get the current total visit count or initialize to 0
-            let totalVisits = localStorage.getItem('totalVisits') || 0;
-            
-            // Get the last visit date
-            let lastVisit = localStorage.getItem('lastVisit') || null;
-            let today = new Date().toDateString();
-            
-            // If it's a new day or first visit, count it
-            if (lastVisit !== today) {
-                totalVisits = Number(totalVisits) + 1;
-                localStorage.setItem('totalVisits', totalVisits);
-                localStorage.setItem('lastVisit', today);
-            }
-            
-            // Display the count
-            document.getElementById('visitCount').textContent = totalVisits;
-        } else {
-            // If localStorage is not supported
-            document.getElementById('visitCount').textContent = "Browser doesn't support local storage";
-        }
-    }
-    
-    // Initialize the counter on page load
-    window.onload = function() {
-        updateVisitCount();
-    };
     </script>
+
+    <script data-goatcounter="https://20001005.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
